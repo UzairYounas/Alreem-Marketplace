@@ -1,0 +1,279 @@
+@font-face {
+    font-family: poppins-bold;
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: poppins-medium;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: poppins-regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== ////////// Common Classes //////////// ===== */
+
+.bg-black{
+    background-color: #000000;
+}
+.bg-normal-black{
+    background-color: #212121;
+}
+.hr-2{
+    height: 3px;
+    background-color: #3D4348;
+    opacity: 1;
+}
+.bor-gray{
+    border: 1px solid #3D4348;
+}
+.br-1{
+    border: 1px solid #3D4348;
+    border-radius: 10px;
+}
+.tit2{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+.tit3{
+    font-family: 'poppins-bold';
+    color: #FFFFFF;
+}
+.tit4{
+    font-family: 'poppins-bold';
+    background: linear-gradient(to bottom, #f3ef9c, #d9cb7f, #bea963, #a3884a, #876832);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.btn-1{
+    outline: none;
+    border: none;
+    background-color: #2A2A2A;
+    border: 1px solid #3D4348;
+    padding: 7px 20px;
+    font-family: 'poppins-bold';
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 100%;
+}
+.btn-2{
+    outline: none;
+    border: none;
+    background: linear-gradient(to right, #BBA051, #ECE490, #BBA052);
+    padding: 10px 20px;
+    font-family: 'poppins-bold';
+    color: #000000;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+/* ================ Login Page Design =============== */
+
+.login-box{
+    padding: 20px 10px;
+    width: 50%;
+    border-radius: 12px;
+}
+.login img[alt="logo"]{
+    width: 170px;
+}
+.login h4{
+    font-family: 'poppins-bold';
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+.login input{
+    border: 1px solid #3D4348 !important;
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+}
+.PhoneInput{
+    border: none;
+    outline: none;
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+}
+.login button{
+    border: none;
+    outline: none;
+    background: linear-gradient(to bottom, #f3ef9c, #d9cb7f, #bea963, #a3884a, #876832);
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+}
+.login label{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+
+/* ============== Sidebar Page =============== */
+
+.icons img{
+    width: 30px;
+}
+.icons p{
+    font-family: 'poppins-bold';
+    color: #EEE692;
+}
+
+/* //////////// Navbar Design ////////////// */
+
+.nav-bar img{
+    border: 1px solid #EEE692;
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+}
+.nav-bar .text-danger{
+    position: absolute;
+    top: 60px;
+    right: 52px;
+    padding: 8px 45px;
+}
+
+/* ============== Home Page Design ============= */
+.bg-3{
+    background: radial-gradient(#37393C, #212121, #212121)
+}
+.home img{
+    width: 100px;
+    border: 1px solid #3D4348;
+    border-radius: 10px;
+}
+.home h5{
+    font-family: 'poppins-regular';
+    color: #EEE692;
+    font-size: 15px;
+}
+.active{
+    background-color: #35352C;
+    border-radius: 15px 0 0 15px;
+}
+
+/* ============= Dashboard Page ============= */
+
+.dashboard img{
+    width: 90px;
+}
+
+/* ============= OrderTab Page =============== */
+.order-tab button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'poppins-bold';
+    color: #FFFFFF;
+    padding: 7px 70px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.order-tb .active{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.order-tab button.active{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.order-data h5{
+    font-family: 'poppins-medium';
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.order-data small{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+.order-data small span{
+    font-family: 'poppins-regular';
+    color: #EEE692;
+}
+.order-data img{
+    width: 100px;
+}
+.order-data button{
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #BBA051, #ECE490, #BBA052);
+    border-radius: 8px;
+    padding: 6px 30px;
+    position: absolute;
+    right: 23px;
+    top: 17px;
+    font-family: 'poppins-medium';
+}
+.ordervalue button{
+    border: none;
+    outline: none;
+    background-color: #212121;
+    font-family: 'poppins-medium';
+    color: #FFFFFF;
+    padding: 5px 12px;
+    border: 1px solid #3D4348;
+    border-radius: 5px;
+}
+.ordervalue .active{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.ordervalue .non-active{
+    color: #7A7A7A;
+}
+
+/* ============= OrderDetail Page ============= */
+
+.order-detail{
+    padding: 5px 10px;
+}
+.order-detail h5,
+.order-info h5{
+    font-family: 'poppins-medium';
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.order-detail img{
+    width: 70px;
+}
+.order-detail small,
+.order-info small{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+.buyer-img{
+    background-color: #5E5C43;
+    border-radius: 50%;
+    padding: 6px;
+    color: #EEE692;
+}
+.checkbox{
+    border: 2px solid #73704E;
+    background-color: #EEE692;
+    border-radius: 50%;
+    padding: 5px;
+    color: #000000;
+    width: 29px;
+    display: flex;
+}
+.order-process p,
+.order-process small{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
