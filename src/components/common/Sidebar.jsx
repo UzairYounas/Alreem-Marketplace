@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
@@ -27,49 +27,53 @@ import edit from '../../assets/images/edit.png'
 import editactive from '../../assets/images/editactive.png'
 
 function Sidebar() {
+  const [activeLink, setActiveLink] = useState('');
+
   return (
-    <div className="d-flex flex-column justify-content-center gap-5 py-3">
-      <img src={logo} />
+    <div className="d-flex flex-column justify-content-center gap-5 py-3 sidebar">
+      <Link to='/'>
+        <img src={logo} />
+      </Link>
 
       <div className="d-flex flex-column gap-4 mt-3 icons">
 
-        <Link to='/' className="d-flex align-items-center gap-2 text-decoration-none p-2 active" >
-          <img src={home} />
+        <NavLink to='/' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('home')}>
+          <img src={activeLink === 'home' ? homeactive : home} />
           <p className="mb-0">Home Page</p>
-        </Link>
+        </NavLink>
 
-        <Link to='/dashboard' className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={dashboard} />
+        <NavLink to='/dashboard' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('dashboard')}>
+          <img src={activeLink === 'dashboard' ? dashboardactive : dashboard } />
           <p className="mb-0">Dashboard</p>
-        </Link>
+        </NavLink>
 
-        <Link to='manageorder' className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={order} />
+        <NavLink to='/manageorder' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('order')}>
+          <img src={activeLink === 'order' ? orderactive : order} />
           <p className="mb-0">Manage order</p>
-        </Link>
+        </NavLink>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={dispute} />
+        <NavLink to='/disputeorder' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('dispute')}>
+          <img src={activeLink === 'dispute' ? disputeactive : dispute} />
           <p className="mb-0">Dispute order</p>
-        </Link>
+        </NavLink>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={inventory} />
+        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('inventory')}>
+          <img src={activeLink === 'inventory' ? inventoryactive : inventory} />
           <p className="mb-0">Inventory</p>
         </Link>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={draft} />
+        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('draft')}>
+          <img src={activeLink === 'draft' ? draftactive : draft} />
           <p className="mb-0">Draft inventory</p>
         </Link>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={inbox} />
+        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('inbox')}>
+          <img src={activeLink === 'inbox' ? inboxactive : inbox} />
           <p className="mb-0">Inbox</p>
         </Link>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2">
-          <img src={edit} />
+        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('edit')}>
+          <img src={activeLink === 'edit' ? editactive : edit} />
           <p className="mb-0">Edit Shop</p>
         </Link>
 

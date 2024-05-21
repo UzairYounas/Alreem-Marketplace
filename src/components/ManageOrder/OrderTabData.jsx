@@ -83,7 +83,7 @@ function OrderTabData({ toggleState }) {
                   </div>
                 </div>
                 <small className="pt-3">{val.quantity}</small>
-                <button><Link to= '/orderdetail' className='text-decoration-none text-black'>Details</Link></button>
+                <button><Link to= '/complete' className='text-decoration-none text-black'>Details</Link></button>
               </div>
             </div>
           ))}
@@ -109,7 +109,7 @@ function OrderTabData({ toggleState }) {
                   </div>
                 </div>
                 <small className="pt-3">{val.quantity}</small>
-                <button><Link to= '/orderdetail' className='text-decoration-none text-black'>Details</Link></button>
+                <button><Link to= '/cancel' className='text-decoration-none text-black'>Details</Link></button>
               </div>
             </div>
           ))}

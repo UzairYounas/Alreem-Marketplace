@@ -33,6 +33,7 @@ html,body{
     height: 3px;
     background-color: #3D4348;
     opacity: 1;
+    border: none;
 }
 .bor-gray{
     border: 1px solid #3D4348;
@@ -124,6 +125,9 @@ html,body{
 
 /* ============== Sidebar Page =============== */
 
+.sidebar img{
+    width: 180px;
+}
 .icons img{
     width: 30px;
 }
@@ -133,11 +137,13 @@ html,body{
 }
 
 /* //////////// Navbar Design ////////////// */
-
+.nav-bar{
+    padding: 11px 15px 7px 15px;
+}
 .nav-bar img{
     border: 1px solid #EEE692;
     border-radius: 50%;
-    width: 60px;
+    width: 52px;
     height: 50px;
 }
 .nav-bar .text-danger{
@@ -276,4 +282,58 @@ html,body{
     font-family: 'poppins-regular';
     color: #FFFFFF;
     margin-bottom: 0;
+}
+.vr{
+    border-left: 5px dotted #EEE692;
+    height: 40px;
+    opacity: 1;
+    background: transparent;
+    margin-left: 11px;
+}
+
+/* ============== Modal Box Design =========== */
+
+.modalbox p,
+.modalbox small{
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+.md-small small{
+    font-size: 14px;
+}
+.md-box img{
+    width: 180px;
+}
+.md-small img{
+    width: 100px;
+}
+.cross-btn{
+    background-color: #3D4348;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    right: 0;
+    cursor: pointer;
+}
+.bg-logo{
+    background-color: #111111;
+    border-radius: 50%;
+    border: 1px solid #3D4348;
+    width: 190px;
+    height: 190px;
+}
+.chatbot img{
+    width: 160px;
+}
+.chatbot p{
+    padding: 0 240px;
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
+}
+.chatbot .chat-info{
+    border: 1px solid #3D4348;
+    border-radius: 30px;
+    padding: 8px 24px;
+    font-family: 'poppins-regular';
+    color: #FFFFFF
 }

@@ -11,6 +11,11 @@ import {
 import DashboardPage from './pages/DashboardPage';
 import OrderPage from './pages/OrderPage';
 import OrderDetailPage from './pages/OrderDetailPage';
+import OrderCompletePage from './pages/OrderCompletePage';
+import OrderCancelPage from './pages/OrderCancelPage';
+import DisputePage from './pages/DisputePage';
+import DisputeDetailPage from './pages/DisputeDetailPage';
+import ChatPage from './pages/ChatPage';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +37,26 @@ const router = createBrowserRouter([
   {
     path: "/orderdetail",
     element: <OrderDetailPage />,
+  },
+  {
+    path: "/complete",
+    element: <OrderCompletePage />,
+  },
+  {
+    path: "/cancel",
+    element: <OrderCancelPage />,
+  },
+  {
+    path: "/disputeorder",
+    element: <DisputePage />,
+  },
+  {
+    path: "/disputeorder/disputedetail",
+    element: <DisputeDetailPage />,
+  },
+  {
+    path: "/chat",
+    element: <ChatPage />,
   }
 
 

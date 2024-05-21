@@ -7,14 +7,14 @@ function Navbar() {
 
   return (
     <div className="bg-normal-black w-100 nav-bar">
-      <div className="d-flex align-item-center justify-content-between px-2 py-3">
+      <div className="d-flex align-items-center justify-content-between">
         <h3 className="tit4">Aleem Seller Dashboard</h3>
 
         <div className="d-flex align-item-center gap-3" onClick={() => setIsVisible(!isVisible)} style={{ cursor: 'pointer' }}>
           <img src={userimg} />
 
           <div className="d-flex flex-column">
-            <h5 className="tit2">Michael Jorden</h5>
+            <p className="tit2 mb-0">Michael Jorden</p>
             <p className="tit2 mb-0">Seller</p>
           </div>
         </div>
