@@ -57,7 +57,7 @@ function Sidebar() {
           <p className="mb-0">Dispute order</p>
         </NavLink>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('inventory')}>
+        <Link to='/inventory' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('inventory')}>
           <img src={activeLink === 'inventory' ? inventoryactive : inventory} />
           <p className="mb-0">Inventory</p>
         </Link>

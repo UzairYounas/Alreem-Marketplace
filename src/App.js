@@ -16,6 +16,7 @@ import OrderCancelPage from './pages/OrderCancelPage';
 import DisputePage from './pages/DisputePage';
 import DisputeDetailPage from './pages/DisputeDetailPage';
 import ChatPage from './pages/ChatPage';
+import InventoryPage from './pages/InventoryPage';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/chat",
     element: <ChatPage />,
+  },
+  {
+    path: "/inventory",
+    element: <InventoryPage />,
   }
 
 

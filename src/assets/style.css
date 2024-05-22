@@ -322,6 +322,9 @@ html,body{
     width: 190px;
     height: 190px;
 }
+/* .chat-app{
+    padding: 10px 10px 0 10px;
+} */
 .chatbot img{
     width: 160px;
 }
@@ -334,6 +337,65 @@ html,body{
     border: 1px solid #3D4348;
     border-radius: 30px;
     padding: 8px 24px;
+    font-family: 'poppins-regular';
+    color: #FFFFFF
+}
+.chatbot span{
+    font-family: 'poppins-regular';
+    color: #FFFFFF
+}
+.chatbot .message{
+    border: 1px solid #3D4348;
+    border-radius: 15px 15px 15px 0;
+    font-family: 'poppins-regular';
+    color: #EEE692;
+}
+.chat-app img{
+    border-radius: 50%;
+    border: 1px solid #3D4348;
+}
+.chatbot input{
+    background-color: #000000;
+    border: 1px solid #3D4348;
+    border-radius: 10px;
+    font-family: 'poppins-regular';
+    color: #999999;
+}
+.chatbot button,
+.chatbot label{
+    outline: none;
+    border: 1px solid #3D4348;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #111111;
+    color: #EEE692;
+}
+.chat-input{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+.inventor img{
+    width: 247px;
+    height: 186px;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.inventor .position-absolute{
+    background-color: #000000;
+    padding: 7px 18px;
+    border-top-right-radius: 33px;
+    bottom: 0;
+    font-family: 'poppins-regular';
+    color: #FFFFFF
+}
+.inventor small{
     font-family: 'poppins-regular';
     color: #FFFFFF
 }
