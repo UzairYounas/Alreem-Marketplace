@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Sidebar from '../components/common/Sidebar'
-import Navbar from '../components/common/Navbar'
+import NavInventory from '../components/common/NavInventory'
 import Inventory from '../components/Inventory/Inventory'
 
 function InventoryPage() {
@@ -12,7 +12,7 @@ function InventoryPage() {
           <Sidebar />
         </div>
         <div className="col-md-10">
-          <Navbar />
+          <NavInventory />
           <Inventory />
         </div>
       </div>
@@ -20,4 +20,4 @@ function InventoryPage() {
   )
 }
 
-export default InventoryPage
+export default InventoryPage;

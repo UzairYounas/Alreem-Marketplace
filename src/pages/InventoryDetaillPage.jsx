@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Sidebar from '../components/common/Sidebar'
-import Navbar from '../components/common/Navbar'
 import InventoryDetail from '../components/Inventory/InventoryDetail'
+import NavInventory from '../components/common/NavInventory'
 
-function InventoryDetaillPage() {
+function InventoryDetailPage() {
+  const [modal, setModal] = useState(false);
+
+
+  sessionStorage.setItem('url',window.location.href)
+
   return (
     <div className="container-fluid bg-normal-black">
       <div className="row">
@@ -12,12 +17,12 @@ function InventoryDetaillPage() {
           <Sidebar />
         </div>
         <div className="col-md-10">
-          <Navbar />
-          <InventoryDetail />
+          <NavInventory showVerticalDots={true} setModal={setModal} />
+          <InventoryDetail modal={modal} setModal={setModal} />
         </div>
       </div>
     </div>
   )
 }
 
-export default InventoryDetaillPage
+export default InventoryDetailPage;
