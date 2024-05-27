@@ -8,6 +8,8 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 
+import { BsThreeDotsVertical } from "react-icons/bs";
+
 import laptop from "../../assets/images/laptop.jpg";
 import mac1 from "../../assets/images/mac1.jpg";
 import mac2 from "../../assets/images/mac2.jpg";
@@ -18,7 +20,8 @@ import muser from "../../assets/images/muser.png";
 import smallstars from "../../assets/images/smallstars.png";
 import bigstars from "../../assets/images/bigstars.png";
 
-function InventoryDetail({modal, setModal, direction, ...args }) {
+function InventoryDetail({direction, ...args }) {
+  const [modal, setModal] = useState(false);
 
   const reviews = [
     {
@@ -76,10 +79,13 @@ function InventoryDetail({modal, setModal, direction, ...args }) {
             <img src={laptop} className="rounded" style={{ width: "450px" }} />
           </div>
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5"> 
           {items.map((val, index) => (
             <div className="br-1 px-3 py-4 d-flex flex-column text-white gap-3">
-              <h4>{val.name}</h4>
+              <div className="d-flex align-items-center justify-content-between">
+                <h4>{val.name}</h4>
+                <BsThreeDotsVertical className="text-white" style={{ cursor: 'pointer' }} onClick={()=> setModal(true)} />
+              </div>
               <p style={{ color: "#EEE692" }}>{val.id}</p>
 
               <div className="d-flex justify-content-between color-select">
@@ -172,6 +178,7 @@ function InventoryDetail({modal, setModal, direction, ...args }) {
               </div>
             </div>
           ))}
+          
         </div>
       </div>
 

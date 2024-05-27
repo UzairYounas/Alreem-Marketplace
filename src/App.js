@@ -18,6 +18,7 @@ import DisputeDetailPage from './pages/DisputeDetailPage';
 import ChatPage from './pages/ChatPage';
 import InventoryPage from './pages/InventoryPage';
 import InventoryDetaillPage from './pages/InventoryDetaillPage';
+import AddProductPage from './pages/AddProductPage';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/inventorydetail",
     element: <InventoryDetaillPage />,
+  },
+  {
+    path: "/editproduct",
+    element: <AddProductPage />,
   }
 
 

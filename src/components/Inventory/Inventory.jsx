@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { CiSearch } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa6";
 
 import laptop from "../../assets/images/laptop.jpg";
 import headphone from "../../assets/images/headphone.jpg";
@@ -101,11 +103,31 @@ function Inventory() {
 
   return (
     <div className="p-3" style={{ backgroundColor: "#29292A" }}>
-      <div className="p-3" style={{ backgroundColor: "#29292A" }}>
+
+        <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
+          <div></div>
+          <div className="position-relative p-2 nav-add">
+            <input type="text" placeholder="search..." className="ps-4" />
+            <CiSearch
+              className="text-white position-absolute h4"
+              style={{ left: "7px", top: "9px" }}
+            />
+          </div>
+
+          <div
+            className="d-flex align-items-center px-3 py-2 gap-3 nav-add nav-btn text-white"
+            style={{ cursor: "pointer" }}
+          >
+            <p className="mb-0">Add Product</p>
+            <FaPlus />
+          </div>
+        </div>
+
         <div className="row">
+
           {items.map((val, index) => (
             <div className="col-md-3">
-              <Link to='/inventorydetail' className=" text-decoration-none">
+              <Link to="/inventorydetail" className=" text-decoration-none">
                 <div className="br-1 inventor mb-4">
                   <div className="position-relative">
                     <img src={val.image} />
@@ -134,7 +156,6 @@ function Inventory() {
             </div>
           ))}
         </div>
-      </div>
 
       <div className="d-flex align-items-center justify-content-between mt-4">
         <div></div>

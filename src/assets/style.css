@@ -167,6 +167,14 @@ body::-webkit-scrollbar-thumb{
 .nav-add{
     border: 1px solid #3D4348;
     border-radius: 25px;
+    width: 60%;
+}
+.nav-btn{
+    border: 1px solid #3D4348;
+    border-radius: 25px;
+}
+.nav-btn:hover{
+    background-color: #212121;
 }
 .nav-add input{
     outline: none;
@@ -407,7 +415,7 @@ body::-webkit-scrollbar-thumb{
 
 
 .inventor img{
-    width: 241px;
+    width: 249px;
     height: 186px;
     object-fit: cover;
     border-top-right-radius: 10px;
@@ -472,4 +480,17 @@ body::-webkit-scrollbar-thumb{
 .review::-webkit-scrollbar-thumb{
     background-color: #FFFFFF;
     border-radius: 50px;
+}
+
+/* ============ ProductAdd Page ================== */
+
+.product-add input,
+.product-add textarea{
+    outline: none;
+    border: 1px solid #3D4348;
+    border-radius: 10px;
+    background: #2c2c2c;
+    padding: 16px;
+    font-family: 'poppins-regular';
+    color: #FFFFFF;
 }

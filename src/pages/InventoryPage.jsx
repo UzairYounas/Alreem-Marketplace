@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Sidebar from '../components/common/Sidebar'
-import NavInventory from '../components/common/NavInventory'
+import Navbar from '../components/common/Navbar'
 import Inventory from '../components/Inventory/Inventory'
 
 function InventoryPage() {
@@ -12,7 +12,7 @@ function InventoryPage() {
           <Sidebar />
         </div>
         <div className="col-md-10">
-          <NavInventory />
+          <Navbar />
           <Inventory />
         </div>
       </div>

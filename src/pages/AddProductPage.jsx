@@ -1,12 +1,10 @@
 import React from 'react'
 
 import Sidebar from '../components/common/Sidebar'
-import InventoryDetail from '../components/Inventory/InventoryDetail'
 import Navbar from '../components/common/Navbar'
+import ProductAdd from '../components/Add Product/ProductAdd'
 
-function InventoryDetailPage() {
-
-
+function AddProductPage() {
   return (
     <div className="container-fluid bg-normal-black">
       <div className="row">
@@ -15,11 +13,11 @@ function InventoryDetailPage() {
         </div>
         <div className="col-md-10">
           <Navbar />
-          <InventoryDetail />
+          <ProductAdd />
         </div>
       </div>
     </div>
   )
 }
 
-export default InventoryDetailPage;
+export default AddProductPage
