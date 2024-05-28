@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -11,9 +11,14 @@ import ring from "../../assets/images/ring.jpg";
 import watch from "../../assets/images/watch.jpg";
 import airbuds from "../../assets/images/airbuds.jpg";
 import keyboard from "../../assets/images/keyboard.jpg";
-import InventoryProduct from "./InventoryProduct";
 
-function Inventory() {
+import InventoryProduct from '../Inventory/InventoryProduct';
+
+function DraftInventory() {
+
+  localStorage.setItem('draftUrl', window.location.href);
+
+
   const items = [
     {
       image: laptop,
@@ -101,6 +106,7 @@ function Inventory() {
     },
   ];
 
+
   return (
     <div className="p-3" style={{ backgroundColor: "#29292A" }}>
 
@@ -126,6 +132,7 @@ function Inventory() {
         <InventoryProduct items={items} />
 
       <div className="d-flex align-items-center justify-content-between mt-4">
+        
         <div></div>
         <div className="d-flex align-items-center justify-content-center ordervalue gap-2">
           <button className="active">1</button>
@@ -144,9 +151,10 @@ function Inventory() {
             Next <FaArrowRight />
           </button>
         </div>
+
       </div>
     </div>
-  );
+  )
 }
 
-export default Inventory;
+export default DraftInventory

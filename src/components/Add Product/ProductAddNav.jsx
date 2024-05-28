@@ -1,42 +1,57 @@
 import React from "react";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { FiPlus } from "react-icons/fi";
-import Quantity from "./Quantity";
 
-function ProductAddNav({ setModal }) {
+function ProductAddNav({ setModal, step, setStep }) {
+  const steps = [
+    "Add Product",
+    "Define Category",
+    "Upload Images",
+    "Inventory",
+    "Shipment cost",
+  ];
+
+  const handleStepClick = (index) => {
+    if (index + 1 <= step) {
+      setStep(index + 1);
+    }
+  };
+
   return (
     <div className="d-flex align-items-center justify-content-between">
       <div className="d-flex align-items-center gap-4 text-secondary">
-        <div className="d-flex align-items-center gap-2 p-3">
-          <small>Add Product</small>
-          <IoCheckmarkCircle />
-        </div>
-
-        <div className="d-flex align-items-center gap-2 p-3">
-          <small>Define Category</small>
-          <IoCheckmarkCircle />
-        </div>
-
-        <div className="d-flex align-items-center gap-2 p-3">
-          <small>Upload Images</small>
-          <IoCheckmarkCircle />
-        </div>
-
-        <div className="d-flex align-items-center gap-2 p-3">
-          <small>Inventory</small>
-          <IoCheckmarkCircle />
-        </div>
-
-        <div className="d-flex align-items-center gap-2 p-3">
-          <small>Shipment cost</small>
-          <IoCheckmarkCircle />
-        </div>
+        {steps.map((title, index) => (
+          <div
+            key={index}
+            className={`d-flex align-items-center gap-2 p-3 ${
+              step === index + 1 ? "text-white" : ""
+            }`}
+            style={{
+              borderBottom: step === index + 1 ? "2px solid #FFFFFF" : "none",
+              cursor: "pointer",
+            }}
+            onClick={() => handleStepClick(index)}
+          >
+            <small>{title}</small>
+            <IoCheckmarkCircle
+              style={{
+                color: step > index + 1 ? "green" : "",
+              }}
+            />
+          </div>
+        ))}
       </div>
 
-      <div className="d-flex align-items-center gap-2 text-white" style={{cursor: 'pointer'}} onClick={() => setModal(true)} >
-        <small>Add color & sizes</small>
-        <FiPlus /> 
-      </div>
+      {step === 4 && (
+        <div
+          className="d-flex align-items-center gap-2 text-white"
+          style={{ cursor: "pointer" }}
+          onClick={() => setModal(true)}
+        >
+          <small>Add color & sizes</small>
+          <FiPlus />
+        </div>
+      )}
     </div>
   );
 }

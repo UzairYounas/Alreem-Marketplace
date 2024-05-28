@@ -38,16 +38,17 @@ function Dashboard() {
       <div className="d-flex gap-3 dashboard">
         <div className="row">
           {items.map((val, index) => (
-            <div className="col-md-6 py-2">
-              <div key={index} className="d-flex align-items-center gap-3">
-                <div className="d-flex flex-column gap-3 py-3 px-4 br-1 bg w-100">
-                  <div className="d-flex align-items-center gap-3">
-                    <img src={val.img} />
-                    <h3 className="tit3">{val.title}</h3>
-                  </div>
-                  <p className="mb-0 tit2">{val.description}</p>
-                  <p className="mb-0 tit2">{val.quantity}</p>
+            <div className="col-md-6 py-2 d-flex">
+              <div
+                key={index}
+                className="d-flex flex-column gap-3 py-3 px-4 br-1 bg w-100"
+              >
+                <div className="d-flex align-items-center gap-3">
+                  <img src={val.img} />
+                  <h3 className="tit3">{val.title}</h3>
                 </div>
+                <p className="mb-0 tit2">{val.description}</p>
+                <p className="mb-0 tit2">{val.quantity}</p>
               </div>
             </div>
           ))}

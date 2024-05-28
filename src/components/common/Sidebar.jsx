@@ -62,10 +62,10 @@ function Sidebar() {
           <p className="mb-0">Inventory</p>
         </NavLink>
 
-        <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('draft')}>
+        <NavLink to='/draftinventory' className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('draft')}>
           <img src={activeLink === 'draft' ? draftactive : draft} />
           <p className="mb-0">Draft inventory</p>
-        </Link>
+        </NavLink>
 
         <Link className="d-flex align-items-center gap-2 text-decoration-none p-2" onClick={() => setActiveLink('inbox')}>
           <img src={activeLink === 'inbox' ? inboxactive : inbox} />

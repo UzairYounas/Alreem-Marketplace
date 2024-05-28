@@ -412,8 +412,6 @@ body::-webkit-scrollbar-thumb{
 
 
 
-
-
 .inventor img{
     width: 249px;
     height: 186px;
@@ -421,13 +419,21 @@ body::-webkit-scrollbar-thumb{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
-.inventor .position-absolute{
+.inventor .product-name{
     background-color: #000000;
     padding: 7px 18px;
     border-top-right-radius: 33px;
     bottom: 0;
     font-family: 'poppins-regular';
     color: #FFFFFF
+}
+.inventor .del-product{
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 26px;
+    border-top-right-radius: 11px;
+    padding: 2px 13px 5px 17px;
+    background-color: #171717;
 }
 .inventor small{
     font-family: 'poppins-regular';
@@ -485,6 +491,7 @@ body::-webkit-scrollbar-thumb{
 /* ============ ProductAdd Page ================== */
 
 .product-add input,
+.price-add input,
 .product-add textarea{
     outline: none;
     border: 1px solid #3D4348;
@@ -493,4 +500,9 @@ body::-webkit-scrollbar-thumb{
     padding: 16px;
     font-family: 'poppins-regular';
     color: #FFFFFF;
+}
+.select-quant{
+    background-color: #2A2A2A;
+    padding: 14px 57px;
+    border-radius: 10px;
 }
