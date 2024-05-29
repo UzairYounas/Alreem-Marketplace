@@ -65,7 +65,7 @@ function InventoryDetail({direction, ...args }) {
   ];
 
   return (
-    <div className="p-3" style={{ backgroundColor: "#29292A" }}>
+    <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       <div className="row mb-3">
         <div className="col-md-7">
           <div className="br-1 p-2 d-flex align-items-center gap-4">

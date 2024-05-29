@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Modal, ModalBody} from "reactstrap";
+import { Modal, ModalBody } from "reactstrap";
 
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
@@ -94,10 +94,20 @@ function OrderDetail(args) {
 
   return (
     <>
-      <Link to="/manageorder" className="text-white text-decoration-none mb-2">
-        <FaArrowLeft /> Order Details
+      <Link
+        to="/disputeorder"
+        className="text-white text-decoration-none mb-2 animated-link"
+      >
+        <span className="back-icon">
+          <FaArrowLeft />
+        </span>
+        &nbsp;Chat Support
       </Link>
-      <div className="p-3 mt-2" style={{ backgroundColor: "#29292A" }}>
+      
+      <div
+        className="height-break p-3 mt-2"
+        style={{ backgroundColor: "#29292A" }}
+      >
         <div className="row">
           <div className="col-md-7">
             <div className="br-1 p-3">
@@ -273,10 +283,7 @@ function OrderDetail(args) {
               )}
 
               {showDispatch && (
-                <button
-                  className="btn-2"
-                  onClick={toggle}
-                >
+                <button className="btn-2" onClick={toggle}>
                   Check Review
                 </button>
               )}

@@ -20,6 +20,8 @@ import InventoryPage from './pages/InventoryPage';
 import InventoryDetaillPage from './pages/InventoryDetaillPage';
 import AddProductPage from './pages/AddProductPage';
 import DraftInventoryPage from './pages/DraftInventoryPage';
+import InboxPage from './pages/InboxPage';
+import EditShopPage from './pages/EditShopPage';
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
   {
     path: "/draftinventory",
     element: <DraftInventoryPage />,
+  },
+  {
+    path: "/inbox",
+    element: <InboxPage />,
+  },
+  {
+    path: "/editshop",
+    element: <EditShopPage />,
   }
 
 

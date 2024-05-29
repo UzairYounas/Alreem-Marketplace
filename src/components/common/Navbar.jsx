@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import userimg from "../../assets/images/user-img.png";
 
-function Navbar({ showDotsIcon, toggleModal}) {
+function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
@@ -21,11 +21,11 @@ function Navbar({ showDotsIcon, toggleModal}) {
               <p className="tit2 mb-0">Seller</p>
             </div>
           </div>
-          {showDotsIcon && <BsThreeDotsVertical className="text-white" style={{cursor: 'pointer'}} onClick={toggleModal} />}
+          
         </div>
 
         {isVisible && (
-        <div className="bg-black text-danger">
+        <div className="bg-black text-danger" style={{zIndex: '1'}}>
           <p className="mb-0">Sign out</p>
         </div>
       )}

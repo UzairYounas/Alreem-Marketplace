@@ -7,12 +7,18 @@ import { HiMiniInformationCircle } from "react-icons/hi2";
 import { IoSend } from "react-icons/io5";
 import { MdOutlineAttachFile } from "react-icons/md";
 
+import { BsThreeDotsVertical } from "react-icons/bs";
+
 import logo from "../../assets/images/logo.png";
 import user from "../../assets/images/user.jpg";
 import shop from "../../assets/images/shop-img.jpg";
 import ring from "../../assets/images/ring.jpg";
 
 function Chat(args) {
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -36,13 +42,22 @@ function Chat(args) {
 
   return (
     <div>
-      <Link to="/disputeorder" className="text-white text-decoration-none mb-2">
-        <FaArrowLeft /> Chat Support
+      <Link
+        to="/disputeorder"
+        className="text-white text-decoration-none mb-2 animated-link"
+      >
+        <span className="back-icon">
+          <FaArrowLeft />
+        </span>
+        &nbsp;Chat Support
       </Link>
-      <div className="p-3 mt-3" style={{ backgroundColor: "#29292A" }}>
+      <div
+        className="height-break p-3 mt-3"
+        style={{ backgroundColor: "#29292A" }}
+      >
         <div className="br-1">
-          <div className="d-flex flex-column align-items-center justify-content-center text-center chatbot gap-4">
-            <div className="bg-logo d-flex align-items-center justify-content-center">
+          <div className="d-flex flex-column align-items-center justify-content-center text-center chatbot gap-4 position-relative">
+            <div className="bg-logo d-flex align-items-center justify-content-center mt-3">
               <img src={logo} alt="Logo" />
             </div>
             <p className="mb-0">
@@ -54,6 +69,19 @@ function Chat(args) {
               <HiMiniInformationCircle />
               <small>Seller has opened a dispute</small>
             </div>
+
+            <BsThreeDotsVertical
+              className="text-white"
+              onClick={toggle}
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                top: "8px",
+                right: "8px",
+                fontSize: "21px",
+              }}
+            />
+
             <hr className="hr-2 w-100" />
 
             <div className="chat-app d-flex flex-column w-100">
@@ -76,7 +104,14 @@ function Chat(args) {
                   />
                   <div className="d-flex flex-column gap-2">
                     {msg.type === "text" ? (
-                      <div className="message p-2">{msg.text}</div>
+                      <div
+                        className="message p-2"
+                        style={{
+                          borderRadius: msg.id === 2 ? "15px 15px 0 15px" : "",
+                        }}
+                      >
+                        {msg.text}
+                      </div>
                     ) : (
                       <img
                         src={msg.textimg}
@@ -115,10 +150,13 @@ function Chat(args) {
         </div>
       </div>
 
-      {/* <Modal isOpen={modal} toggle={toggle} {...args} size="md" centered={true}>
-        <ModalBody className="br-1 bg-normal-black" style={{borderRadius: '15px', padding: '15px 0'}}>
+      <Modal isOpen={modal} toggle={toggle} {...args} size="md" centered={true}>
+        <ModalBody
+          className="br-1 bg-normal-black"
+          style={{ borderRadius: "15px", padding: "15px 0" }}
+        >
           <div className="d-flex flex-column align-items-center justify-content-center text-center text-white">
-            <p style={{ color: "#EEE692"}}>Invite Admin</p>
+            <p style={{ color: "#EEE692" }}>Invite Admin</p>
             <small>
               Are you sure you want the admin to invite in this chat?
             </small>
@@ -130,7 +168,7 @@ function Chat(args) {
             <p className="text-danger mb-0">cancel</p>
           </div>
         </ModalBody>
-      </Modal> */}
+      </Modal>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function InventoryProduct({ items }) {
           >
             <div className="br-1 inventor mb-4">
               <div className="position-relative">
-                <img src={val.image} />
+                <img src={val.image} className="w-100" />
                 {window.location.href !== localStorage.getItem("draftUrl") && (
                   <div className="position-absolute product-name">
                     <p className="mb-0">{val.name}</p>

@@ -12,7 +12,7 @@ function DisputeTab() {
     }
 
   return (
-    <div className="p-3" style={{ backgroundColor: "#29292A" }}>
+    <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       <div className="d-flex align-items-center p-2 br-1 order-tab">
         <button className={toggleState === 1 ? 'active' : 'null'} onClick={() => toggleTab(1)}>Active</button>
         <button className={toggleState === 2 ? 'active' : 'null'} onClick={() => toggleTab(2)}>Closed</button>

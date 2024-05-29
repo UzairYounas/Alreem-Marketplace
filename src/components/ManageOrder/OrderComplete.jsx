@@ -85,7 +85,7 @@ function OrderComplete() {
       <Link to="/manageorder" className="text-white text-decoration-none mb-2">
         <FaArrowLeft /> Order Details
       </Link>
-      <div className="p-3 mt-2" style={{ backgroundColor: "#29292A" }}>
+      <div className="height-break p-3 mt-2" style={{ backgroundColor: "#29292A" }}>
         <div className="row">
           <div className="col-md-7">
             <div className="br-1 p-3">

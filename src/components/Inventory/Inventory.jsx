@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -102,28 +103,32 @@ function Inventory() {
   ];
 
   return (
-    <div className="p-3" style={{ backgroundColor: "#29292A" }}>
-
-        <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
-          <div></div>
-          <div className="position-relative p-2 nav-add">
-            <input type="text" placeholder="search..." className="ps-4" />
-            <CiSearch
-              className="text-white position-absolute h4"
-              style={{ left: "7px", top: "9px" }}
-            />
-          </div>
-
-          <div
-            className="d-flex align-items-center px-3 py-2 gap-3 nav-add nav-btn text-white"
-            style={{ cursor: "pointer" }}
-          >
-            <p className="mb-0">Add Product</p>
-            <FaPlus />
-          </div>
+    <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
+      
+      <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
+        <div></div>
+        <div
+          className="position-relative p-2 nav-add"
+          style={{ width: "450px" }}
+        >
+          <input type="text" placeholder="search..." className="ps-4" />
+          <CiSearch
+            className="text-white position-absolute h4"
+            style={{ left: "7px", top: "9px" }}
+          />
         </div>
 
-        <InventoryProduct items={items} />
+        <Link
+          to="/editproduct"
+          className="d-flex align-items-center justify-content-center px-3 py-2 gap-3 nav-add nav-btn text-white"
+          style={{ cursor: "pointer" }}
+        >
+          <p className="mb-0">Add Product</p>
+          <FaPlus />
+        </Link>
+      </div>
+
+      <InventoryProduct items={items} />
 
       <div className="d-flex align-items-center justify-content-between mt-4">
         <div></div>

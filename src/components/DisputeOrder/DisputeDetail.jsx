@@ -17,15 +17,29 @@ function DisputeDetail() {
 
   return (
     <>
-      <Link to='/disputeorder' className="text-white text-decoration-none mb-2">
-        <FaArrowLeft /> Active Dispute
+      <Link
+        to="/disputeorder"
+        className="text-white text-decoration-none mb-2 animated-link"
+      >
+        <span className="back-icon">
+          <FaArrowLeft />
+        </span>
+        &nbsp;Chat Support
       </Link>
       <hr className="hr-2" />
-      <Link to='/chat' className="d-flex align-items-center justify-content-between text-white text-decoration-none">
-        <p style={{color: '#EEE692', marginBottom: '0'}}>Contact Chat Support</p>
+      <Link
+        to="/chat"
+        className="d-flex align-items-center justify-content-between text-white text-decoration-none"
+      >
+        <p style={{ color: "#EEE692", marginBottom: "0" }}>
+          Contact Chat Support
+        </p>
         <MdKeyboardArrowRight className="h4" />
       </Link>
-      <div className="p-3 mt-2" style={{ backgroundColor: "#29292A" }}>
+      <div
+        className="height-break p-3 mt-2"
+        style={{ backgroundColor: "#29292A" }}
+      >
         {items.map((val, index) => (
           <div className="br-1 p-3 d-flex flex-column gap-2">
             <h4 style={{ color: "#EEE692" }}>User Details</h4>
