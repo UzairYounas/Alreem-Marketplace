@@ -95,7 +95,7 @@ function OrderDetail(args) {
   return (
     <>
       <Link
-        to="/disputeorder"
+        to="/manageorder"
         className="text-white text-decoration-none mb-2 animated-link"
       >
         <span className="back-icon">
@@ -332,6 +332,7 @@ function OrderDetail(args) {
                     </div>
                   </ModalBody>
                 </Modal>
+
               </div>
             </div>
           </div>

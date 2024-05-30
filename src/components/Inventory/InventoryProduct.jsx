@@ -1,24 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { MdDelete } from "react-icons/md";
 
 function InventoryProduct({ items }) {
+  console.log('Items in InventoryProduct:', items);
+
   return (
     <div className="row">
       {items.map((val, index) => (
-        <div className="col-md-3">
+        <div className="col-md-3" key={index}>
           <Link
             to={
               window.location.href !== localStorage.getItem("draftUrl")
                 ? "/inventorydetail"
                 : ""
             }
-            className=" text-decoration-none"
+            className="text-decoration-none"
           >
             <div className="br-1 inventor mb-4">
               <div className="position-relative">
-                <img src={val.image} className="w-100" />
+                <img src={val.image} className="w-100" alt={val.name} />
                 {window.location.href !== localStorage.getItem("draftUrl") && (
                   <div className="position-absolute product-name">
                     <p className="mb-0">{val.name}</p>

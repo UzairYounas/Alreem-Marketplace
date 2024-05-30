@@ -102,6 +102,15 @@ function Inventory() {
     },
   ];
 
+  const truncateName = (name) => {
+    return name.length > 15 ? name.slice(0, 15) + '...' : name;
+  };
+
+  const truncatedItems = items.map(item => ({
+    ...item,
+    name: truncateName(item.name)
+  }));
+
   return (
     <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       
@@ -128,7 +137,7 @@ function Inventory() {
         </Link>
       </div>
 
-      <InventoryProduct items={items} />
+      <InventoryProduct items={truncatedItems} />
 
       <div className="d-flex align-items-center justify-content-between mt-4">
         <div></div>

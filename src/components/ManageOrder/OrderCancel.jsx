@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { FaArrowLeft } from "react-icons/fa6";
@@ -13,80 +13,88 @@ import product2 from "../../assets/images/product2.png";
 import product3 from "../../assets/images/product3.png";
 
 function OrderCancel() {
+  const items = [
+    {
+      img: product1,
+      name: "Vitality vibeshoes",
+      price: "AED500",
+      quantity: "1",
+      size: "40",
+      color: "Pink",
+    },
+    {
+      img: product2,
+      name: "Diamond Ring",
+      price: "AED 350",
+      quantity: "1",
+      size: "40",
+    },
+    {
+      img: product3,
+      name: "Power Bank",
+      price: "AED500",
+      quantity: "1",
+      size: "40",
+    },
+  ];
 
-    const items = [
-        {
-          img: product1,
-          name: "Vitality vibeshoes",
-          price: "AED500",
-          quantity: "1",
-          size: "40",
-          color: "Pink",
-        },
-        {
-          img: product2,
-          name: "Diamond Ring",
-          price: "AED 350",
-          quantity: "1",
-          size: "40",
-        },
-        {
-          img: product3,
-          name: "Power Bank",
-          price: "AED500",
-          quantity: "1",
-          size: "40",
-        },
-      ];
-    
-      const info = [
-        {
-          img: <FaUser />,
-          heading: "Buyer Details",
-          title1: "Name",
-          description1: "Michael Jorden",
-          title2: "Phone Number",
-          description2: "+9914876498562",
-          title3: "Email Address",
-          description3: "micheljordan@gmail.com",
-        },
-        {
-          img: <IoCard />,
-          heading: "Payment Method",
-          title1: "Total Amount",
-          description1: "1024:00 AED",
-          title2: "Delivery Charges",
-          description2: "20:00 AED",
-          title3: "Order Placed on",
-          description3: "2024-11-14,1447",
-          title4: "Order Id",
-          description4: "ALREEM-1",
-        },
-        {
-          img: <TbBus />,
-          heading: "Shipping Method",
-          title1: "Tracking Id",
-          description1: "ALREEM-1",
-          title2: "Address",
-          description2: "96 church way bradbury",
-          title3: "Alternative Address",
-          description3: "96 church way bradbury",
-          title4: "Country",
-          description4: "United Arab Emirates (UAE)",
-          title5: "City",
-          description5: "Abu Dhabi",
-          title6: "Postal Code",
-          description6: "65488",
-        },
-      ];
-
+  const info = [
+    {
+      img: <FaUser />,
+      heading: "Buyer Details",
+      title1: "Name",
+      description1: "Michael Jorden",
+      title2: "Phone Number",
+      description2: "+9914876498562",
+      title3: "Email Address",
+      description3: "micheljordan@gmail.com",
+    },
+    {
+      img: <IoCard />,
+      heading: "Payment Method",
+      title1: "Total Amount",
+      description1: "1024:00 AED",
+      title2: "Delivery Charges",
+      description2: "20:00 AED",
+      title3: "Order Placed on",
+      description3: "2024-11-14,1447",
+      title4: "Order Id",
+      description4: "ALREEM-1",
+    },
+    {
+      img: <TbBus />,
+      heading: "Shipping Method",
+      title1: "Tracking Id",
+      description1: "ALREEM-1",
+      title2: "Address",
+      description2: "96 church way bradbury",
+      title3: "Alternative Address",
+      description3: "96 church way bradbury",
+      title4: "Country",
+      description4: "United Arab Emirates (UAE)",
+      title5: "City",
+      description5: "Abu Dhabi",
+      title6: "Postal Code",
+      description6: "65488",
+    },
+  ];
 
   return (
     <>
-      <Link to="/manageorder" className="text-white text-decoration-none mb-2">
-        <FaArrowLeft /> Order Details
+      <Link
+        to="/manageorder"
+        className="text-white text-decoration-none mb-2 animated-link"
+      >
+        <span className="back-icon">
+          <FaArrowLeft />
+        </span>
+        &nbsp;Chat Support
       </Link>
-      <div className="height-break p-3 mt-2" style={{ backgroundColor: "#29292A" }}>
+
+      <div
+        className="height-break p-3 mt-2"
+        style={{ backgroundColor: "#29292A" }}
+      >
         <div className="row">
           <div className="col-md-7">
             <div className="br-1 p-3">
@@ -213,14 +221,13 @@ function OrderCancel() {
                   </div>
                   <small>2:56 PM</small>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default OrderCancel
+export default OrderCancel;
