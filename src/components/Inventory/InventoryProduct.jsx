@@ -32,6 +32,7 @@ function InventoryProduct({ items }) {
                 )}
               </div>
               <div className="d-flex flex-column p-2 gap-3 mt-3">
+                
                 {window.location.href !== localStorage.getItem("draftUrl") && (
                   <div className="d-flex justify-content-between">
                     <small>Product ID:</small>

@@ -20,8 +20,11 @@ import muser from "../../assets/images/muser.png";
 import smallstars from "../../assets/images/smallstars.png";
 import bigstars from "../../assets/images/bigstars.png";
 
-function InventoryDetail({direction, ...args }) {
+function InventoryDetail({ direction, ...args }) {
   const [modal, setModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(laptop); // Default to laptop image
+
+  const images = [mac1, mac2, mac3, mac4, mac5];
 
   const reviews = [
     {
@@ -70,21 +73,36 @@ function InventoryDetail({direction, ...args }) {
         <div className="col-md-7">
           <div className="br-1 p-2 d-flex align-items-center gap-4">
             <div className="d-flex flex-column gap-3 invent-det">
-              <img src={mac1} className="rounded" />
-              <img src={mac2} className="rounded" />
-              <img src={mac3} className="rounded" />
-              <img src={mac4} className="rounded" />
-              <img src={mac5} className="rounded" />
+
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  className="rounded"
+                  onClick={() => setSelectedImage(image)}
+                  style={{ cursor: "pointer" }}
+                />
+              ))}
+
             </div>
-            <img src={laptop} className="rounded" style={{ width: "450px" }} />
+            <img
+              src={selectedImage}
+              className="rounded"
+              style={{ width: "450px", height: "500px", objectFit: "cover" }}
+            />
           </div>
         </div>
-        <div className="col-md-5"> 
+        <div className="col-md-5">
+
           {items.map((val, index) => (
             <div className="br-1 px-3 py-4 d-flex flex-column text-white gap-3">
               <div className="d-flex align-items-center justify-content-between">
                 <h4>{val.name}</h4>
-                <BsThreeDotsVertical className="text-white" style={{ cursor: 'pointer' }} onClick={()=> setModal(true)} />
+                <BsThreeDotsVertical
+                  className="text-white"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => setModal(true)}
+                />
               </div>
               <p style={{ color: "#EEE692" }}>{val.id}</p>
 
@@ -95,9 +113,6 @@ function InventoryDetail({direction, ...args }) {
                     className="color-ball"
                     style={{
                       backgroundColor: "#5A4B90",
-                      width: "20px",
-                      height: "20px",
-                      borderRadius: "50%",
                     }}
                   ></div>
                   <div
@@ -232,14 +247,13 @@ function InventoryDetail({direction, ...args }) {
                 <p
                   className="text-danger mb-0"
                   style={{ cursor: "pointer" }}
-                  onClick={()=> setModal(false)}
+                  onClick={() => setModal(false)}
                 >
                   Cancel
                 </p>
               </div>
             </ModalBody>
           </Modal>
-
         </div>
       </div>
     </div>

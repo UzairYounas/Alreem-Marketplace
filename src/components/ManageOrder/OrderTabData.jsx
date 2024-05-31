@@ -57,7 +57,12 @@ function OrderTabData({ toggleState }) {
                   </div>
                 </div>
                 <small className="pt-3">{val.quantity}</small>
-                <button><Link to= '/orderdetail' className='text-decoration-none text-black'>Details</Link></button>
+                <Link
+                  to="/orderdetail"
+                  className="text-decoration-none text-black"
+                >
+                  <button>Details</button>
+                </Link>
               </div>
             </div>
           ))}
@@ -66,27 +71,35 @@ function OrderTabData({ toggleState }) {
 
       <div className={toggleState === 2 ? "d-block" : "d-none"}>
         <div className="row">
-          {items.slice().reverse().map((val, index) => (
-            <div className="col-md-12 mb-4">
-              <div className="br-1 p-2 position-relative">
-                <div className="d-flex align-items-center gap-3 mb-2">
-                  <img src={val.img} />
+          {items
+            .slice()
+            .reverse()
+            .map((val, index) => (
+              <div className="col-md-12 mb-4">
+                <div className="br-1 p-2 position-relative">
+                  <div className="d-flex align-items-center gap-3 mb-2">
+                    <img src={val.img} />
 
-                  <div className="d-flex flex-column gap-3">
-                    <h5>{val.title}</h5>
-                    <small className="mb-0">
-                      {val.description} <span>{val.number}</span>
-                    </small>
-                    <small className="mb-0">
-                      {val.delivery} <span>{val.date}</span>
-                    </small>
+                    <div className="d-flex flex-column gap-3">
+                      <h5>{val.title}</h5>
+                      <small className="mb-0">
+                        {val.description} <span>{val.number}</span>
+                      </small>
+                      <small className="mb-0">
+                        {val.delivery} <span>{val.date}</span>
+                      </small>
+                    </div>
                   </div>
+                  <small className="pt-3">{val.quantity}</small>
+                  <Link
+                    to="/complete"
+                    className="text-decoration-none text-black"
+                  >
+                    <button>Details</button>
+                  </Link>
                 </div>
-                <small className="pt-3">{val.quantity}</small>
-                <button><Link to= '/complete' className='text-decoration-none text-black'>Details</Link></button>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
@@ -109,13 +122,14 @@ function OrderTabData({ toggleState }) {
                   </div>
                 </div>
                 <small className="pt-3">{val.quantity}</small>
-                <button><Link to= '/cancel' className='text-decoration-none text-black'>Details</Link></button>
+                <Link to="/cancel" className="text-decoration-none text-black">
+                  <button>Details</button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </div>
-
     </div>
   );
 }

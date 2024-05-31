@@ -85,7 +85,7 @@ function Chat(args) {
             <hr className="hr-2 w-100" />
 
             <div className="chat-app d-flex flex-column w-100">
-              
+
               {messages.map((msg) => (
                 <div
                   key={msg.id}
@@ -170,6 +170,7 @@ function Chat(args) {
           </div>
         </ModalBody>
       </Modal>
+      
     </div>
   );
 }
