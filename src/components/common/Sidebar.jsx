@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
@@ -63,72 +62,38 @@ function Sidebar() {
 
   return (
     <>
-      {/* {status ? (
-        <div
-          className="side-nav"
-          style={{ backgroundColor: "#212121", zIndex: "10" }}
-        >
-          <div className="d-flex align-items-center justify-content-between">
-            <Link to="/">
-              <img src={logo} style={{ width: "150px" }} />
-            </Link>
-
-            <IoClose />
-          </div>
-
-          <div className="d-flex flex-column gap-4 mt-3 icons">
-            {navItems.map((item, index) => (
-              <NavLink
-                key={index}
-                to={item.to}
-                className="d-flex align-items-center gap-2 text-decoration-none p-2"
-              >
-                {({ isActive }) => (
-                  <>
-                    <img
-                      src={isActive ? item.imgActive : item.img}
-                      alt={item.label}
-                    />
-                    <p className="mb-0">{item.label}</p>
-                  </>
-                )}
-              </NavLink>
-            ))}
-          </div>
+      <div className={`side-nav p-3 ${status ? "visible" : ""}`}>
+        <div className="d-flex align-items-center justify-content-between">
+          <Link to="/">
+            <img src={logo} style={{ width: "100px" }} alt="Logo" />
+          </Link>
+          <IoClose className="close-bar" onClick={() => setStatus(false)} />
         </div>
-      ) : null} */}
-
-      {status ? (
-        <div className="side-nav p-3">
-          <div className="d-flex align-items-center justify-content-between">
-            <Link to="/">
-              <img src={logo} style={{ width: "100px" }} />
-            </Link>
-            <IoClose className="close-bar" onClick={() => setStatus(false)} />
-          </div>
-          <div className="d-flex flex-column gap-3 side-icons mt-3">
-            {navItems.map((item, index) => (
-              <NavLink
-                key={index}
-                to={item.to}
-                className="d-flex align-items-center gap-2 text-decoration-none p-2"
-              >
-                {({ isActive }) => (
-                  <>
-                    <img
-                      src={isActive ? item.imgActive : item.img}
-                      alt={item.label}
-                    />
-                    <p className="mb-0">{item.label}</p>
-                  </>
-                )}
-              </NavLink>
-            ))}
-          </div>
+        <div className="d-flex flex-column gap-3 side-icons mt-3">
+          {navItems.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className="d-flex align-items-center gap-2 text-decoration-none p-2"
+            >
+              {({ isActive }) => (
+                <>
+                  <img
+                    src={isActive ? item.imgActive : item.img}
+                    alt={item.label}
+                  />
+                  <p className="mb-0">{item.label}</p>
+                </>
+              )}
+            </NavLink>
+          ))}
         </div>
-      ) : null}
+      </div>
 
-      <FaBars className="d-lg-none d-md-none d-sm-flex d-flex text-white mt-3 h3" onClick={() => setStatus(true)} />
+      <FaBars
+        className="d-lg-none d-md-none d-sm-flex d-flex text-white mt-3 h3"
+        onClick={() => setStatus(true)}
+      />
       <div className="d-lg-flex d-md-flex d-sm-none d-none flex-column justify-content-center gap-5 py-3 sidebar">
         <Link to="/">
           <img src={logo} alt="Logo" />

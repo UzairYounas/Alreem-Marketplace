@@ -34,7 +34,7 @@ function Dashboard() {
   ];
 
   return (
-    <div className="vh-100 p-3" style={{ backgroundColor: "#29292A" }}>
+    <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       <div className="d-flex gap-3 dashboard">
         <div className="row">
           {items.map((val, index) => (

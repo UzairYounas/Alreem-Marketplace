@@ -43,7 +43,7 @@ function OrderTabData({ toggleState }) {
           {items.map((val, index) => (
             <div className="col-md-12 mb-4">
               <div className="br-1 p-2 position-relative">
-                <div className="d-flex align-items-center gap-3 mb-2">
+                <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column gap-3 mb-2">
                   <img src={val.img} />
 
                   <div className="d-flex flex-column gap-3">
@@ -77,7 +77,7 @@ function OrderTabData({ toggleState }) {
             .map((val, index) => (
               <div className="col-md-12 mb-4">
                 <div className="br-1 p-2 position-relative">
-                  <div className="d-flex align-items-center gap-3 mb-2">
+                  <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column gap-3 mb-2">
                     <img src={val.img} />
 
                     <div className="d-flex flex-column gap-3">
@@ -108,7 +108,7 @@ function OrderTabData({ toggleState }) {
           {items.map((val, index) => (
             <div className="col-md-12 mb-4">
               <div className="br-1 p-2 position-relative">
-                <div className="d-flex align-items-center gap-3 mb-2">
+                <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column gap-3 mb-2">
                   <img src={val.img} />
 
                   <div className="d-flex flex-column gap-3">

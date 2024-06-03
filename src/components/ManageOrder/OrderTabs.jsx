@@ -23,7 +23,7 @@ function OrderTabs() {
 
       <div className="d-flex align-items-center justify-content-between mt-4">
         <div></div>
-        <div className="d-flex align-items-center justify-content-center ordervalue gap-2">
+        <div className="d-lg-flex d-md-flex d-sm-none d-none align-items-center justify-content-center ordervalue gap-2">
           <button className="active">1</button>
           <button>2</button>
           <button>3</button>

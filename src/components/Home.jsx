@@ -4,10 +4,10 @@ import shopimg from "../assets/images/shop-img.jpg";
 
 function Home() {
   return (
-    <div className="vh-100 p-3" style={{ backgroundColor: "#29292A" }}>
+    <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       <div className="d-flex flex-column gap-3 home">
         <div className="d-flex flex-column justify-content-center gap-3 br-1 bg">
-          <div className="d-flex gap-2 p-3">
+          <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column gap-2 p-3">
             <img src={shopimg} />
 
             <div className="d-flex flex-column gap-2">
@@ -20,7 +20,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="d-flex align-items-center gap-3">
+        <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column align-items-center gap-3">
           <div className="d-flex flex-column gap-2 p-3 br-1 bg w-100">
             <h5>Address</h5>
             <p className="mb-0 tit2">Ajman United AArab Emirates</p>
@@ -32,7 +32,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="d-flex align-items-center gap-3">
+        <div className="d-flex flex-lg-row flex-md-row flex-sm-column flex-column align-items-center gap-3">
           <div className="d-flex flex-column gap-2 p-3 br-1 bg w-100">
             <h5>Website</h5>
             <p className="mb-0 tit2">www.gradolabmail.com</p>

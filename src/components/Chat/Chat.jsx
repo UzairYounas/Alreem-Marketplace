@@ -89,7 +89,7 @@ function Chat(args) {
               {messages.map((msg) => (
                 <div
                   key={msg.id}
-                  className={`d-flex align-items-end gap-3 p-2 ${
+                  className={`d-flex align-items-end gap-3 p-2 mb-4 ${
                     msg.id === 2 ? "flex-row-reverse text-right" : ""
                   }`}
                 >

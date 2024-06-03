@@ -115,10 +115,9 @@ function Inventory() {
     <div className="height-break p-3" style={{ backgroundColor: "#29292A" }}>
       
       <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
-        <div></div>
+        <div className="d-lg-block d-md-block d-sm-none d-none"></div>
         <div
-          className="position-relative p-2 nav-add"
-          style={{ width: "450px" }}
+          className="position-relative p-2 nav-add search-btn"
         >
           <input type="text" placeholder="search..." className="ps-4" />
           <CiSearch
@@ -141,7 +140,7 @@ function Inventory() {
 
       <div className="d-flex align-items-center justify-content-between mt-4">
         <div></div>
-        <div className="d-flex align-items-center justify-content-center ordervalue gap-2">
+        <div className="d-lg-flex d-md-flex d-sm-none d-none align-items-center justify-content-center ordervalue gap-2">
           <button className="active">1</button>
           <button>2</button>
           <button>3</button>
